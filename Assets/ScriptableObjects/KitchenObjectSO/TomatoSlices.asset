@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b66c2b083b65cab4da4f4795483bd3d9, type: 3}
-  m_Name: CheeseBlock
+  m_Name: TomatoSlices
   m_EditorClassIdentifier: 
-  prefab: {fileID: 3715153917449865625, guid: af1f25e9f3b29314fabe82a37eb901af, type: 3}
-  sprite: {fileID: 21300000, guid: da2d04fe27b94e34ea0b624569b48a6f, type: 3}
-  objectName: Cheese Block
+  prefab: {fileID: 3715153917449865625, guid: ce563376776ca8f498ec24500a89e007, type: 3}
+  sprite: {fileID: 21300000, guid: c9f08c3c1ae2a364aaeaa3712540b1d4, type: 3}
+  objectName: Tomato Slices
