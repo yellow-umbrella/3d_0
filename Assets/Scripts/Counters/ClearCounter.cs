@@ -20,15 +20,23 @@ public class ClearCounter : BaseCounter
         {   // KitchenObject is here
             if (player.HasKitchenObject())
             {   // Player is carrying sth
+                if (player.GetKitchenObject().TryGetPlate(out Plate plate))
+                {
+                    if (plate.TryAddIngredient(GetKitchenObject().GetKitchenObjectSO()))
+                    {
+                        GetKitchenObject().DestroySelf();
+                    }
+                } else if (GetKitchenObject().TryGetPlate(out plate))
+                {
+                    if (plate.TryAddIngredient(player.GetKitchenObject().GetKitchenObjectSO()))
+                    {
+                        player.GetKitchenObject().DestroySelf();
+                    }
+                }
             } else
             {   // Player is not carrying anything
                 GetKitchenObject().SetKitchenObjectParent(player);
             }
         }
-    }
-
-    public override void InteractAlternate(Player player)
-    {
-        throw new System.NotImplementedException();
     }
 }
